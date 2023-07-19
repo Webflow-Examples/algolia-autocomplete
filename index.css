@@ -1,0 +1,143 @@
+/************
+*************
+- All classes prefixed with aa- are algolia classes
+*************
+*************
+*/
+
+/* || scrollbar in the algolia results dropdown and variables */
+
+:root {
+  --aa-scrollbar-track-background-color-rgb: 0, 0, 0;
+  --aa-scrollbar-thumb-background-color-rgb: 255, 255, 255;
+  --black: #1c1c1c;
+  --white: #ffffff;
+}
+
+/* || custom styles for webflow classes */
+
+label {
+  margin-bottom: 0px;
+}
+
+.sr-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.sr-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.nav-link {
+  text-underline-offset: 6px;
+}
+
+/* algolia styles */
+
+.aa-Form {
+  /* background-color: rgb(255 255 255 / 10%); */
+  background-color: var(--black);
+  border-color: rgb(255 255 255 / 60%);
+  border-width: 2px;
+}
+
+.aa-Form:hover {
+  border-color: var(--white);
+}
+
+.aa-Form:focus-visible {
+  border-color: var(--white);
+}
+
+.aa-Form:focus-within {
+  border-color: var(--white);
+}
+
+.aa-Label svg,
+.aa-LoadingIndicator svg {
+  color: var(--white);
+}
+
+.aa-SubmitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aa-SubmitButton:focus-visible {
+  outline-color: var(--white);
+}
+
+.aa-Input {
+  color: var(--white);
+}
+
+.aa-Input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.aa-Panel {
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.aa-PanelLayout,
+.aa-Panel--scrollable {
+  background-color: var(--black);
+}
+
+.aa-Item {
+  color: var(--white);
+  padding: 15px;
+}
+
+.aa-Item[aria-selected="true"] {
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.aa-GradientBottom {
+  display: none;
+}
+
+.aa-ClearButton {
+  color: var(--white);
+}
+
+.aa-ClearButton:hover {
+  color: var(--white);
+}
+
+.aa-ClearButton:focus-visible {
+  color: var(--white);
+  outline-color: var(--white);
+  outline-width: 0.5px;
+}
+
+/* mobile styles for algolia */
+
+@media only screen and (max-width: 680px) {
+  .aa-DetachedSearchButton {
+    /* background-color: rgb(255 255 255 / 10%); */
+    background-color: var(--black);
+    border-color: rgb(255 255 255 / 60%);
+    border-width: 2px;
+  }
+
+  .aa-SubmitIcon,
+  .aa-DetachedCancelButton {
+    color: var(--white);
+  }
+
+  .aa-DetachedSearchButtonPlaceholder {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .aa-DetachedContainer {
+    background-color: var(--black);
+  }
+}

@@ -1,1 +1,1 @@
-# algolia-autocomplete
+# Algolia Autocomplete
