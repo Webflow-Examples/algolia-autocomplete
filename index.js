@@ -13,7 +13,7 @@ const searchClient = algoliasearch(
 const autocompleteSearch = autocomplete({
   // the element in Webflow to attach the search input to
   container: "#autocomplete",
-  // props to pass to autocomplete element, using placeholder as an example
+  // props to pass to autocomplete element
   placeholder: "Spiderman, Batman, etc...",
   autoFocus: true,
   // the items to display
