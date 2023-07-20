@@ -41,7 +41,6 @@ label {
 /* algolia styles */
 
 .aa-Form {
-  /* background-color: rgb(255 255 255 / 10%); */
   background-color: var(--black);
   border-color: rgb(255 255 255 / 60%);
   border-width: 2px;
@@ -122,7 +121,6 @@ label {
 
 @media only screen and (max-width: 680px) {
   .aa-DetachedSearchButton {
-    /* background-color: rgb(255 255 255 / 10%); */
     background-color: var(--black);
     border-color: rgb(255 255 255 / 60%);
     border-width: 2px;
