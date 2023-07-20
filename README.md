@@ -2,24 +2,24 @@
 
 A search experience powered by Algolia Autocomplete.
 
-- [Algolia Autocomplete docs](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/)
-- Demo Webflow site: [https://algolia-autocomplete-example.webflow.io/](https://algolia-autocomplete-example.webflow.io/)
+- <a href="https://algolia-autocomplete-example.webflow.io/" target="_blank">Demo Webflow site</a>
+- <a href="https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/" target="_blank">Algolia Autocomplete docs</a>
 
 ## How it works
 
 Create the search index in Algolia and populate it with your Webflow CMS data. See this repo (link coming soon) on how it can be done with a script that can be run locally. That repo also explains how data can be kept in sync between the Webflow CMS and Algolia search index database with Webflow webhooks.
 
-Then in Webflow, place a <a href="https://university.webflow.com/lesson/custom-code-embed" target="_blank">custom code embed element</a> inside of a [div block](https://university.webflow.com/lesson/div-block) and give the div block an ID that will be referenced in the Autocomplete setup script. This will attach the Autocomplete search input to the div block on the page.
+Then in Webflow, place a <a href="https://university.webflow.com/lesson/custom-code-embed" target="_blank">custom code embed element</a> inside of a div block and give the div block an ID that will be referenced in the Autocomplete setup script. This will attach the Autocomplete search input to the div block on the page.
 
 ## Styling
 
 All Algolia CSS classes are pre-fixed with `aa-`. Once the Algolia autocomplete is rendered on the page on the live site, you can poke around by inspecting the page, identifying the Algolia class, and adding your custom styles. This is the approach taken in the `index.css` file part of this repo.
 
-Alternatively, pass the `classNames` prop to the autocomplete element. See the following page for details: [Autocomplete Parameters: classNames](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-classnames).
+Alternatively, pass the `classNames` prop to the autocomplete element. See the following page for details: <a href="https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-classnames" target="_blank">Autocomplete Parameters: classNames</a>.
 
 ## Custom elements
 
-The Autocomplete script allows you to define custom <a href="https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/templates/" target="_blank">templates</a> to influence the layout with different areas like each search result or when there are no results. These can be created in Webflow and the HTML can be copied and pasted inside of the script. See the [Components page](https://algolia-autocomplete-example.webflow.io/components) from the demo site.
+The Autocomplete script allows you to define custom <a href="https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/templates/" target="_blank">templates</a> to influence the layout with different areas like each search result or when there are no results. These can be created in Webflow and the HTML can be copied and pasted inside of the script. See the <a href="https://algolia-autocomplete-example.webflow.io/components" target="_blank">Components page</a> from the demo site.
 
 An example is included below from `index.js`.
 
