@@ -11,6 +11,29 @@ Create the search index in Algolia and populate it with your Webflow CMS data. S
 
 Then in Webflow, place a <a href="https://university.webflow.com/lesson/custom-code-embed" target="_blank">custom code embed element</a> inside of a div block and give the div block an ID that will be referenced in the Autocomplete setup script. This will attach the Autocomplete search input to the div block on the page.
 
+## Scripts
+
+Load the following scripts before the main code in `index.js`.
+
+```html
+<!-- algolia stylesheet base styles -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+/>
+<!-- custom styles to override algolia styles + some custom styles -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://webflow-examples.github.io/algolia-autocomplete/index.css"
+/>
+
+<!-- relevant algolia scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/preact/dist/preact.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+```
+
 ## Styling
 
 All Algolia CSS classes are pre-fixed with `aa-`. Once the Algolia autocomplete is rendered on the page on the live site, you can poke around by inspecting the page, identifying the Algolia class, and adding your custom styles. This is the approach taken in the `index.css` file part of this repo.
@@ -19,7 +42,7 @@ Alternatively, pass the `classNames` prop to the autocomplete element. See the f
 
 ## Custom elements
 
-The Autocomplete script allows you to define custom <a href="https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/templates/" target="_blank">templates</a> to influence the layout with different areas like each search result or when there are no results. These can be created in Webflow and the HTML can be copied and pasted inside of the script. See the <a href="https://algolia-autocomplete-example.webflow.io/components" target="_blank">Components page</a> from the demo site.
+The Autocomplete script allows you to define custom <a href="https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/templates/" target="_blank">templates</a> to influence the layout of different areas like each search result or when there are no results. These can be created in Webflow and the HTML can be copied and pasted inside of the script. See the <a href="https://algolia-autocomplete-example.webflow.io/components" target="_blank">Components page</a> from the demo site.
 
 An example is included below from `index.js`.
 
@@ -48,6 +71,7 @@ item({ item, html }) {
 ## The Javascript
 
 ```js
+<script>
 // import relevant methods from algolia
 const { autocomplete, getAlgoliaResults } = window["@algolia/autocomplete-js"];
 
@@ -133,4 +157,5 @@ const autocompleteSearch = autocomplete({
     ];
   },
 });
+</script>
 ```
