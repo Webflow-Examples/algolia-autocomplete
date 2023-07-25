@@ -7,7 +7,7 @@ A search experience powered by Algolia Autocomplete.
 
 ## How it works
 
-Create the search index in Algolia and populate it with your Webflow CMS data. See this repo (link coming soon) on how it can be done with a script that can be run locally. That repo also explains how data can be kept in sync between the Webflow CMS and Algolia search index database with Webflow webhooks.
+Create the search index in Algolia and populate it with your Webflow CMS data. See <a href="https://github.com/Webflow-Examples/algolia-sync" target="_blank">this repo</a> on how it can be done with a script that can be run locally. That repo also explains how data can be kept in sync between the Webflow CMS and Algolia search index database with Webflow webhooks.
 
 Then in Webflow, place a <a href="https://university.webflow.com/lesson/custom-code-embed" target="_blank">custom code embed element</a> inside of a div block and give the div block an ID that will be referenced in the Autocomplete setup script. This will attach the Autocomplete search input to the div block on the page.
 
